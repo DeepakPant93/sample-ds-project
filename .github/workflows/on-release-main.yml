@@ -28,7 +28,6 @@ jobs:
                   PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
                   RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
     deploy-docs:
-        needs: publish
         runs-on: ubuntu-latest
         steps:
             - name: Check out

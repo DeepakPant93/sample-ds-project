@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "src"
+name = "sample-ds-project"
 version = "0.0.1"
 description = "A Sample Project for Data Science experiments"
 authors = ["Deepak Pant <deepak.93p@gmail.com>"]
