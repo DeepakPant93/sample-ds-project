@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  sample-ds-project:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sample-ds-project
+    ports:
+      - "8008:8008"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      uvicorn main:app
+      --host 0.0.0.0
+      --port 8008
+      --reload
