@@ -164,3 +164,11 @@ replace = 'version = "{new_version}"'
 filename = "src/__init__.py"
 search = '__version__ = "{current_version}"'
 replace = '__version__ = "{new_version}"'
+
+[[tool.mypy.overrides]]
+module = [
+    "joblib.*",
+    "yaml.*",
+    "ensure.*"
+]
+ignore_missing_imports = true
