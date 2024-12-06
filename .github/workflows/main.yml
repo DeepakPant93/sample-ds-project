@@ -1,4 +1,4 @@
-name: Main
+name: test and build pipeline
 
 on:
     push:
@@ -49,9 +49,9 @@ jobs:
 
             - name: Check typing
               run: poetry run mypy
-            - name: Upload coverage reports to Codecov with GitHub Action on Python 3.11
+            - name: Upload coverage reports to Codecov with GitHub Action on Python 3.12
               uses: codecov/codecov-action@v4
-              if: ${{ matrix.python-version == '3.11' }}
+              if: ${{ matrix.python-version == '3.12' }}
 
     build:
         runs-on: ubuntu-latest
