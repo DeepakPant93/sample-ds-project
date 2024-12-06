@@ -1,8 +1,8 @@
 """
 
-This module defines custom exception classes and error-handling utilities tailored 
-to the needs of a data science pipeline. It helps standardize error reporting, improve 
-debugging, and provide meaningful feedback during model training, data preprocessing, 
+This module defines custom exception classes and error-handling utilities tailored
+to the needs of a data science pipeline. It helps standardize error reporting, improve
+debugging, and provide meaningful feedback during model training, data preprocessing,
 and prediction processes.
 
 Classes:
@@ -45,8 +45,8 @@ Additional Notes:
     - Ensure that custom exceptions are raised with meaningful messages to assist in debugging and error resolution.
 """
 
-
 from http import HTTPStatus
+
 from fastapi import HTTPException, status
 
 

@@ -1,8 +1,8 @@
 """
 
-This module provides centralized logging utilities for the data science pipeline. 
-It standardizes logging practices, ensures consistency across components, and facilitates 
-easy debugging and monitoring of the pipeline's execution, including data preprocessing, 
+This module provides centralized logging utilities for the data science pipeline.
+It standardizes logging practices, ensures consistency across components, and facilitates
+easy debugging and monitoring of the pipeline's execution, including data preprocessing,
 model training, evaluation, and predictions.
 
 Functions:
@@ -42,25 +42,20 @@ Additional Notes:
     - The module can be extended to integrate with third-party monitoring tools like Elasticsearch, Splunk, or Datadog.
 """
 
+import logging
 import os
 import sys
-import logging
 
 logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
 log_dir = "logs"
-log_filepath = os.path.join(log_dir,"sample-ds-project.log")
+log_filepath = os.path.join(log_dir, "sample-ds-project.log")
 os.makedirs(log_dir, exist_ok=True)
 
 
-
 logging.basicConfig(
-    level= logging.INFO,
-    format= logging_str,
-
-    handlers=[
-        logging.FileHandler(log_filepath),
-        logging.StreamHandler(sys.stdout)
-    ]
+    level=logging.INFO,
+    format=logging_str,
+    handlers=[logging.FileHandler(log_filepath), logging.StreamHandler(sys.stdout)],
 )
 
 logger = logging.getLogger("sample-ds-project-logger")

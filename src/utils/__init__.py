@@ -14,7 +14,17 @@ Functions:
     encode_image_into_base64: Encodes an image into a base64 string.
 """
 
-from src.utils.common import read_yaml, create_directories, save_json, load_json, save_bin, load_bin, get_size, decode_image, encode_image_into_base64
+from src.utils.common import (
+    create_directories,
+    decode_image,
+    encode_image_into_base64,
+    get_size,
+    load_bin,
+    load_json,
+    read_yaml,
+    save_bin,
+    save_json,
+)
 
 __all__ = [
     "read_yaml",
@@ -25,5 +35,5 @@ __all__ = [
     "load_bin",
     "get_size",
     "decode_image",
-    "encode_image_into_base64"
+    "encode_image_into_base64",
 ]

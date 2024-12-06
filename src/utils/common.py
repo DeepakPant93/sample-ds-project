@@ -1,15 +1,18 @@
-import os
-from box.exceptions import BoxValueError
-import yaml
-from src.logging import logger
+import base64
 import json
-import joblib
-from ensure import ensure_annotations
-from box import ConfigBox
+import os
 from pathlib import Path
 from typing import Any
-import base64
 
+import joblib
+import yaml
+from box import ConfigBox
+from box.exceptions import BoxValueError
+from ensure import ensure_annotations
+
+from src.logging import logger
+
+YAML_EMPTY_ERROR = "YAML configuration file is empty"
 
 
 @ensure_annotations
@@ -31,11 +34,10 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
             content = yaml.safe_load(yaml_file)
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return ConfigBox(content)
-    except BoxValueError:
-        raise ValueError("yaml file is empty")
-    except Exception as e:
-        raise e
-    
+    except BoxValueError as box_err:
+        raise ValueError(YAML_EMPTY_ERROR) from box_err
+    except Exception:
+        raise
 
 
 @ensure_annotations
@@ -64,8 +66,6 @@ def save_json(path: Path, data: dict):
         json.dump(data, f, indent=4)
 
     logger.info(f"json file saved at: {path}")
-
-
 
 
 @ensure_annotations
@@ -111,6 +111,7 @@ def load_bin(path: Path) -> Any:
     logger.info(f"binary file loaded from: {path}")
     return data
 
+
 @ensure_annotations
 def get_size(path: Path) -> str:
     """get size in KB
@@ -121,33 +122,33 @@ def get_size(path: Path) -> str:
     Returns:
         str: size in KB
     """
-    size_in_kb = round(os.path.getsize(path)/1024)
+    size_in_kb = round(os.path.getsize(path) / 1024)
     return f"~ {size_in_kb} KB"
 
 
-def decodeImage(imgstring, fileName):
+def decode_image(imgstring, file_name):
     """
     Decodes a base64 string into an image and saves it at the given path
 
     Args:
         imgstring (str): base64 string of the image
-        fileName (str): path at which to save the image
+        file_name (str): path at which to save the image
     """
     imgdata = base64.b64decode(imgstring)
-    with open(fileName, 'wb') as f:
+    with open(file_name, "wb") as f:
         f.write(imgdata)
         f.close()
 
 
-def encodeImageIntoBase64(croppedImagePath):
+def encode_image_into_base64(cropped_image_path):
     """
     Encodes an image file into a base64 string.
 
     Args:
-        croppedImagePath (str): Path to the image file to be encoded.
+        cropped_image_path (str): Path to the image file to be encoded.
 
     Returns:
         bytes: Base64 encoded string of the image.
     """
-    with open(croppedImagePath, "rb") as f:
+    with open(cropped_image_path, "rb") as f:
         return base64.b64encode(f.read())

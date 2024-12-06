@@ -1,5 +1,3 @@
-
-
 class PredictionPipeline:
     def __init__(self):
         """
@@ -10,8 +8,6 @@ class PredictionPipeline:
         """
         pass
 
-
-    
     def predict(self):
         """
         Makes predictions with the trained model.

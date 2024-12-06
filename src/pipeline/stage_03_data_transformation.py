@@ -2,6 +2,7 @@ from logging import logger
 
 STAGE_NAME = "Data Transformation Stage"
 
+
 class DataTransformationTrainingPipeline:
     def __init__(self):
         """This class shall be used for data transformation pipeline.
@@ -10,7 +11,7 @@ class DataTransformationTrainingPipeline:
         """
         pass
 
-    def main(self):
+    def run(self):
         """
         This method executes the main data transformation pipeline process.
 
@@ -20,15 +21,12 @@ class DataTransformationTrainingPipeline:
         pass
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = DataTransformationTrainingPipeline()
-        obj.main()
+        obj.run()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)
-        raise e
-
+        raise

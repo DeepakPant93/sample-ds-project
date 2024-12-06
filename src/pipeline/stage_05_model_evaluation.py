@@ -2,6 +2,7 @@ from logging import logger
 
 STAGE_NAME = "Model Evaluation Stage"
 
+
 class ModelEvaluationPipeline:
     def __init__(self):
         """
@@ -11,7 +12,7 @@ class ModelEvaluationPipeline:
         """
         pass
 
-    def main(self):
+    def run(self):
         """
         This method executes the main model evaluation pipeline process.
 
@@ -21,15 +22,12 @@ class ModelEvaluationPipeline:
         pass
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = ModelEvaluationPipeline()
-        obj.main()
+        obj.run()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)
-        raise e
-
+        raise

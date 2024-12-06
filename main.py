@@ -11,18 +11,21 @@ app = FastAPI(
     description="A Sample Project for Data Science experiments",
     version=__version__,
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
 )
 
 
 app = FastAPI()
 
+
 async def health_check():
     return {"status": "healthy"}
+
 
 # Include routers
 app.add_api_route("/health", health([health_check]), tags=["Management"], description="Management APIs")
 app.include_router(router, prefix="/api/v1", tags=["Model Operations"])
+
 
 def custom_openapi():
     if app.openapi_schema:
@@ -42,4 +45,4 @@ app.openapi = custom_openapi
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8008)
+    uvicorn.run(app, host="127.0.0.1", port=8008)

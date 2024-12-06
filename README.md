@@ -8,8 +8,8 @@
 
 A Sample Project for Data Science experiments
 
-- **Github repository**: <https://github.com/DeepakPant93/sample-ds-project/>
-- **Documentation** <https://DeepakPant93.github.io/sample-ds-project/>
+-   **Github repository**: <https://github.com/DeepakPant93/sample-ds-project/>
+-   **Documentation** <https://DeepakPant93.github.io/sample-ds-project/>
 
 ## Getting started with your project
 
@@ -38,11 +38,11 @@ To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookie
 
 ## Releasing a new version
 
-- Create an API Token on [PyPI](https://pypi.org/).
-- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting [this page](https://github.com/DeepakPant93/sample-ds-project/settings/secrets/actions/new).
-- Create a [new release](https://github.com/DeepakPant93/sample-ds-project/releases/new) on Github.
-- Create a new tag in the form `*.*.*`.
-- For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
+-   Create an API Token on [PyPI](https://pypi.org/).
+-   Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting [this page](https://github.com/DeepakPant93/sample-ds-project/settings/secrets/actions/new).
+-   Create a [new release](https://github.com/DeepakPant93/sample-ds-project/releases/new) on Github.
+-   Create a new tag in the form `*.*.*`.
+-   For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
 
 ---
 

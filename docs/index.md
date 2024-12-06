@@ -5,7 +5,6 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/DeepakPant93/sample-ds-project)](https://img.shields.io/github/commit-activity/m/DeepakPant93/sample-ds-project)
 [![License](https://img.shields.io/github/license/DeepakPant93/sample-ds-project)](https://img.shields.io/github/license/DeepakPant93/sample-ds-project)
 
-
 A Sample Project for Data Science experiments
 This repository contains a sample Data Science application built with FastAPI, designed to streamline model training and prediction processes via RESTful APIs. The application leverages **Poetry** for dependency management, ensuring a robust and scalable development environment.
 
@@ -14,23 +13,26 @@ This repository contains a sample Data Science application built with FastAPI, d
 ## Features
 
 ### FastAPI Endpoints:
-  - `/train-model`: API endpoint to initiate model training with provided data and configurations.
-  - `/predict`: API endpoint for generating predictions using the trained model.
+
+-   `/train-model`: API endpoint to initiate model training with provided data and configurations.
+-   `/predict`: API endpoint for generating predictions using the trained model.
 
 ### Poetry for Dependency Management:
-  - Simplifies package installation and management.
-  - Ensures compatibility and reproducibility of the project environment.
+
+-   Simplifies package installation and management.
+-   Ensures compatibility and reproducibility of the project environment.
 
 ### Scalable Architecture:
-  - Modular design with clear separation of concerns.
-  - Easy integration of new features or pipelines.
+
+-   Modular design with clear separation of concerns.
+-   Easy integration of new features or pipelines.
 
 ---
 
 ## Prerequisites
 
-- Python >= 3.12
-- Poetry installed (`pip install poetry`)
+-   Python >= 3.12
+-   Poetry installed (`pip install poetry`)
 
 ---
 
@@ -66,16 +68,18 @@ This repository contains a sample Data Science application built with FastAPI, d
 ## API Endpoints
 
 ### `/train-model`
-- **Method**: POST  
-- **Description**: Triggers the model training process using provided training data and configuration.  
-- **Input**: JSON object containing training data and optional hyperparameters.  
-- **Output**: Success or error message indicating the status of training.
+
+-   **Method**: POST
+-   **Description**: Triggers the model training process using provided training data and configuration.
+-   **Input**: JSON object containing training data and optional hyperparameters.
+-   **Output**: Success or error message indicating the status of training.
 
 ### `/predict`
-- **Method**: POST  
-- **Description**: Generates predictions for new data using the trained model.  
-- **Input**: JSON object containing features for prediction.  
-- **Output**: Prediction results, including probabilities or class labels.
+
+-   **Method**: POST
+-   **Description**: Generates predictions for new data using the trained model.
+-   **Input**: JSON object containing features for prediction.
+-   **Output**: Prediction results, including probabilities or class labels.
 
 ---
 
