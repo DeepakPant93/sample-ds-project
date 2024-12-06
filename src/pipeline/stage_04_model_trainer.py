@@ -1,10 +1,10 @@
-from logging import logger
+from src.logging import logger
 
 STAGE_NAME = "Model Training Stage"
 
 
 class ModelTrainingPipeline:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         This class shall be used for model training pipeline.
 
@@ -12,7 +12,7 @@ class ModelTrainingPipeline:
         """
         pass
 
-    def run(self):
+    def run(self) -> None:
         """
         This method executes the main model training pipeline process.
 

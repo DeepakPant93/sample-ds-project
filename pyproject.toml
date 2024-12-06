@@ -26,6 +26,9 @@ matplotlib = "^3.8.0"  # Data visualization
 scipy = "^1.11.3"  # Scientific computation
 joblib = "^1.3.2"  # Parallel processing and caching
 fastapi-health = "^0.4.0"  # Health check for FastAPI
+pyyaml = "^6.0.2"
+python-box = "^7.2.0"
+ensure = "^1.0.4"
 
 [tool.poetry.group.dev.dependencies]
 deptry = "^0.16.2"  # For dependency management

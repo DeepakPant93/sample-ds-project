@@ -1,5 +1,5 @@
 class PredictionPipeline:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Initializes the PredictionPipeline class.
 
@@ -8,7 +8,7 @@ class PredictionPipeline:
         """
         pass
 
-    def predict(self):
+    def predict(self) -> None:
         """
         Makes predictions with the trained model.
 

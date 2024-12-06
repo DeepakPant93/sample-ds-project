@@ -1,10 +1,10 @@
-from logging import logger
+from src.logging import logger
 
 STAGE_NAME = "Model Evaluation Stage"
 
 
 class ModelEvaluationPipeline:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         This class shall be used for model evaluation pipeline.
 
@@ -12,7 +12,7 @@ class ModelEvaluationPipeline:
         """
         pass
 
-    def run(self):
+    def run(self) -> None:
         """
         This method executes the main model evaluation pipeline process.
 

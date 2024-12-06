@@ -1,17 +1,17 @@
-from logging import logger
+from src.logging import logger
 
 STAGE_NAME = "Data Validation Stage"
 
 
 class DataValidationTrainingPipeline:
-    def __init__(self):
+    def __init__(self) -> None:
         """This class shall be used for data validation pipeline.
 
         __init__ is the constructor method of class.
         """
         pass
 
-    def run(self):
+    def run(self) -> None:
         """This method executes the main data validation pipeline process.
 
         It orchestrates the data validation tasks to validate the data

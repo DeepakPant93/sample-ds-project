@@ -36,12 +36,10 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
             return ConfigBox(content)
     except BoxValueError as box_err:
         raise ValueError(YAML_EMPTY_ERROR) from box_err
-    except Exception:
-        raise
 
 
 @ensure_annotations
-def create_directories(path_to_directories: list, verbose=True):
+def create_directories(path_to_directories: list, verbose: bool = True) -> None:
     """create list of directories
 
     Args:
@@ -55,7 +53,7 @@ def create_directories(path_to_directories: list, verbose=True):
 
 
 @ensure_annotations
-def save_json(path: Path, data: dict):
+def save_json(path: Path, data: dict) -> None:
     """save json data
 
     Args:
@@ -86,7 +84,7 @@ def load_json(path: Path) -> ConfigBox:
 
 
 @ensure_annotations
-def save_bin(data: Any, path: Path):
+def save_bin(data: Any, path: Path) -> None:
     """save binary file
 
     Args:
@@ -126,7 +124,8 @@ def get_size(path: Path) -> str:
     return f"~ {size_in_kb} KB"
 
 
-def decode_image(imgstring, file_name):
+@ensure_annotations
+def decode_image(imgstring: str, file_name: str) -> None:
     """
     Decodes a base64 string into an image and saves it at the given path
 
@@ -140,7 +139,8 @@ def decode_image(imgstring, file_name):
         f.close()
 
 
-def encode_image_into_base64(cropped_image_path):
+@ensure_annotations
+def encode_image_into_base64(cropped_image_path: str) -> Any:
     """
     Encodes an image file into a base64 string.
 

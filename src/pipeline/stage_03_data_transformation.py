@@ -1,17 +1,17 @@
-from logging import logger
+from src.logging import logger
 
 STAGE_NAME = "Data Transformation Stage"
 
 
 class DataTransformationTrainingPipeline:
-    def __init__(self):
+    def __init__(self) -> None:
         """This class shall be used for data transformation pipeline.
 
         __init__ is the constructor method of class.
         """
         pass
 
-    def run(self):
+    def run(self) -> None:
         """
         This method executes the main data transformation pipeline process.
 

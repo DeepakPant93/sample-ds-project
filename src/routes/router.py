@@ -4,7 +4,7 @@ router = APIRouter()
 
 
 @router.post("/train-model")
-async def train_model():
+async def train_model() -> dict:
     """
     Endpoint to train the model. This function encapsulates
     the logic to initiate model training and returns a success
@@ -17,7 +17,7 @@ async def train_model():
 
 
 @router.post("/predict")
-async def predict():
+async def predict() -> dict:
     """
     Endpoint to make predictions. This function encapsulates
     the logic to make predictions with the trained model and
