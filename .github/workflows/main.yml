@@ -49,8 +49,11 @@ jobs:
 
             - name: Check typing
               run: poetry run mypy
+
             - name: Upload coverage reports to Codecov with GitHub Action on Python 3.12
-              uses: codecov/codecov-action@v4
+              uses: codecov/codecov-action@v5
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
               if: ${{ matrix.python-version == '3.12' }}
 
     build:
