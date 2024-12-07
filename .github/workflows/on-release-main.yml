@@ -6,14 +6,24 @@ on:
         branches: [main]
 
 jobs:
-    build-docker:
+    build-push-docker-image:
         runs-on: ubuntu-latest
+
         steps:
-            - name: Check out
+            - name: Checkout repository
               uses: actions/checkout@v4
 
-            - name: Set up the environment
-              uses: ./.github/actions/setup-poetry-env
+            - name: Login to Docker Hub
+              env:
+                  DOCKER_USER: ${{ secrets.DOCKERHUB_USER }}
+                  DOCKER_PWD: ${{ secrets.DOCKERHUB_PUSH_TOKEN }}
+              run: echo $DOCKER_PWD | docker login -u $DOCKER_USER --password-stdin
+
+            - name: Build and Push Docker Image
+              run: make docker-build-and-push
+
+            - name: Clean up Docker system
+              run: docker system prune -f
 
     publish:
         runs-on: ubuntu-latest
