@@ -50,8 +50,7 @@ RUN pip install --no-cache-dir /app/*.whl
 # COPY . /app
 
 # Expose application port
-EXPOSE 8008
+EXPOSE 80
 
 # Command to run the application
-# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8008"]
 CMD ["sample_ds_project"]
