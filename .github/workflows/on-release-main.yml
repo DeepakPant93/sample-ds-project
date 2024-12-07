@@ -6,6 +6,15 @@ on:
         branches: [main]
 
 jobs:
+    build-docker:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out
+              uses: actions/checkout@v4
+
+            - name: Set up the environment
+              uses: ./.github/actions/setup-poetry-env
+
     publish:
         runs-on: ubuntu-latest
         steps:

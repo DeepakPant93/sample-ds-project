@@ -21,7 +21,7 @@ Usage:
 
     Example:
         ```python
-        from src.logging import logger
+        from sample_ds_project.logging import logger
 
         logger.info("Starting the model training process...")
         logger.error("An error occurred during data validation.")

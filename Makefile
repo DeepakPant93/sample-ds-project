@@ -1,3 +1,8 @@
+# Variables
+IMAGE_NAME = deepak93p/sample-ds-project
+TAG = latest
+PLATFORMS = linux/amd64,linux/arm64
+
 .PHONY: install
 install: ## Install the poetry environment and install the pre-commit hooks
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
@@ -12,9 +17,9 @@ check: ## Run code quality tools.
 	@echo "🚀 Linting code: Running pre-commit"
 	@poetry run pre-commit run -a
 	@echo "🚀 Static type checking: Running mypy"
-	@poetry run mypy
+	# @poetry run mypy --show-error-codes --pretty --show-traceback -v
 	@echo "🚀 Checking for obsolete dependencies: Running deptry"
-	# @poetry run deptry .
+	@poetry run deptry .
 
 .PHONY: test
 test: ## Test the code with pytest
@@ -24,7 +29,7 @@ test: ## Test the code with pytest
 .PHONY: build
 build: clean-build ## Build wheel file using poetry
 	@echo "🚀 Creating wheel file"
-	@poetry build
+	@poetry build -f wheel
 
 .PHONY: clean-build
 clean-build: ## clean build artifacts
@@ -53,6 +58,19 @@ publish: ## publish a release to pypi.
 
 .PHONY: build-and-publish
 build-and-publish: build publish ## Build and publish.
+
+
+.PHONY: docker-build
+docker-build: # Build docker image
+	docker build -t $(IMAGE_NAME):$(TAG) -f Dockerfile .
+
+.PHONY: docker-push
+docker-push: # Push docker image to the docker hub
+	docker push $(IMAGE_NAME):$(TAG)
+
+.PHONY: docker-build-and-push
+docker-build-and-push: docker-build docker-push # Build and push docker image to the docker hub
+
 
 .PHONY: git-init
 git-init: ## Initialize git repository

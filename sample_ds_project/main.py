@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from fastapi_health import health
 
-from src.routes.router import router
+from sample_ds_project.routes.router import router
 
 __version__ = "0.0.1"
 
@@ -42,7 +42,12 @@ def custom_openapi():
 
 app.openapi = custom_openapi
 
-if __name__ == "__main__":
+
+def main():
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8008)
+    uvicorn.run(app, host="0.0.0.0", port=8008)
+
+
+if __name__ == "__main__":
+    main()

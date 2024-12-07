@@ -1,37 +1,37 @@
-::: src
+::: sample_ds_project
 
 ## Configuration
 
-::: src.config
+::: sample_ds_project.config
 
 ## Constants
 
-::: src.constants
+::: sample_ds_project.constants
 
 ## Components
 
-::: src.components
+::: sample_ds_project.components
 
 ## Logger
 
-::: src.logging
+::: sample_ds_project.logging
 
 ## Utils
 
-::: src.utils
+::: sample_ds_project.utils
 
 ## Exceptions
 
-::: src.exception
+::: sample_ds_project.exception
 
 ## Entities
 
-::: src.entity
+::: sample_ds_project.entity
 
 ## Pipeline
 
-::: src.pipeline
+::: sample_ds_project.pipeline
 
 ## Routes
 
-::: src.routes
+::: sample_ds_project.routes

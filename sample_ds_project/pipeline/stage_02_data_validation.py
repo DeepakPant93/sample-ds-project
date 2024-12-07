@@ -1,4 +1,4 @@
-from src.logging import logger
+from sample_ds_project.logging import logger
 
 STAGE_NAME = "Data Validation Stage"
 

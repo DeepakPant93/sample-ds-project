@@ -60,7 +60,7 @@ This repository contains a sample Data Science application built with FastAPI, d
 4. Run the FastAPI server:
 
     ```bash
-    uvicorn src.main:app --reload
+    uvicorn sample_ds_project.main:app --reload
     ```
 
 ---
@@ -86,7 +86,7 @@ This repository contains a sample Data Science application built with FastAPI, d
 ## Project Structure
 
 ```plaintext
-src/
+sample_ds_project/
 ├── config/          # Configuration files and settings
 ├── components/      # Reusable components for the application
 ├── constants/       # Static constants and enumerations

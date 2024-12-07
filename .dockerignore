@@ -1,0 +1,75 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/
+.venv/
+
+# Ignore package and dependency cache
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.poetry_cache/
+.cache/
+__pycache__/
+dist/
+build/
+
+# Ignore test directories and coverage files
+tests/
+.coverage
+coverage.xml
+*.cover
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Ignore environment configuration files (secrets)
+.env
+*.env
+
+# Ignore Docker-related files that don't need to be copied
+Dockerfile*
+docker-compose.yml
+*.pid
+
+# Ignore other common unwanted files
+*.DS_Store
+Thumbs.db
+coverage.xml
+docker-compose.yml
+Dockerfile
+Makefile
+mkdocs.yml
+.gitignore
+.editorconfig
+pre-commit-config.yaml
+CONTRIBUTING.md
+
+
+# Ignore other unwanted folder
+.github/
+.git/
+.mypycache/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+dist/
+site/
+docs/
+research/
+notebooks/
+tests/

@@ -10,7 +10,7 @@ from box import ConfigBox
 from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 
-from src.logging import logger
+from sample_ds_project.logging import logger
 
 YAML_EMPTY_ERROR = "YAML configuration file is empty"
 

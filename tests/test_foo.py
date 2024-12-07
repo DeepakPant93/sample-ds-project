@@ -1,4 +1,4 @@
-from src.foo import foo
+from sample_ds_project.foo import foo
 
 
 def test_foo():

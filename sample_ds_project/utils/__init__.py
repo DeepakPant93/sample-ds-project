@@ -14,7 +14,7 @@ Functions:
     encode_image_into_base64: Encodes an image into a base64 string.
 """
 
-from src.utils.common import (
+from sample_ds_project.utils.common import (
     create_directories,
     decode_image,
     encode_image_into_base64,

@@ -1,12 +1,11 @@
-from src.logging import logger
+from sample_ds_project.logging import logger
 
-STAGE_NAME = "Model Evaluation Stage"
+STAGE_NAME = "Data Transformation Stage"
 
 
-class ModelEvaluationPipeline:
+class DataTransformationTrainingPipeline:
     def __init__(self) -> None:
-        """
-        This class shall be used for model evaluation pipeline.
+        """This class shall be used for data transformation pipeline.
 
         __init__ is the constructor method of class.
         """
@@ -14,10 +13,10 @@ class ModelEvaluationPipeline:
 
     def run(self) -> None:
         """
-        This method executes the main model evaluation pipeline process.
+        This method executes the main data transformation pipeline process.
 
-        It orchestrates the model evaluation tasks to evaluate the model
-        using the data prepared in the previous stages.
+        It orchestrates the data transformation tasks to transform the
+        data which was prepared in the previous stage.
         """
         pass
 
@@ -25,7 +24,7 @@ class ModelEvaluationPipeline:
 if __name__ == "__main__":
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-        obj = ModelEvaluationPipeline()
+        obj = DataTransformationTrainingPipeline()
         obj.run()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
