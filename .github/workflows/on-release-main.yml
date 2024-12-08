@@ -44,7 +44,7 @@ jobs:
                   app-name: "sample-ds-project-app"
                   slot-name: "production"
                   publish-profile: ${{ secrets.AzureAppService_PublishProfile_9a36e93f19654f13992bc9d1d3810da9 }}
-                  images: "index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d8f384bd63ca489698414f3ee2f9d7b2 }}/deepak93p/sample-ds-project:${{ github.sha }}"
+                  images: "index.docker.io/deepak93p/sample-ds-project:${{ github.sha }}"
 
     publish:
         runs-on: ubuntu-latest
