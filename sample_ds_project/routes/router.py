@@ -13,7 +13,7 @@ async def train_model() -> dict:
     Returns:
         dict: A dictionary containing a success message.
     """
-    return {"message": "Training Model Successful"}
+    return {"message": "Training Model Successful..."}
 
 
 @router.post("/predict")
@@ -27,4 +27,4 @@ async def predict() -> dict:
         dict: A dictionary containing a success message.
     """
 
-    return {"message": "Prediction Successful"}
+    return {"message": "Prediction Successful..."}
