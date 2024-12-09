@@ -46,7 +46,7 @@ jobs:
                   publish-profile: ${{ secrets.AzureAppService_PublishProfile_9a36e93f19654f13992bc9d1d3810da9 }}
                   images: "index.docker.io/deepak93p/sample-ds-project:${{ github.sha }}"
 
-    publish:
+    publish-to-pypi:
         runs-on: ubuntu-latest
         steps:
             - name: Check out
